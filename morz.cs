@@ -18,6 +18,7 @@ namespace ConsoleApp1
 
             
 
+            //Чтение языка морза
             using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
             {
                 string line;
@@ -35,6 +36,7 @@ namespace ConsoleApp1
             }
 
 
+            //Чтение аглийского языка
             path = @"G:\CU\ConsoleApp1\EN.txt";
 
             using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
@@ -56,6 +58,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("Примечание: для записи языка морза после каждой буквы и пробела писать '|'. Пример: .-|-...|-.-.| |-..|.| ");
 
+            //Управление переводом
             while (true)
             {
 
@@ -66,6 +69,7 @@ namespace ConsoleApp1
 
                 switch (t)
                 {
+                        //Перевод из EN в Морзу
                     case 1:
                         {
                             Console.WriteLine("Введите текст: ");
@@ -89,6 +93,8 @@ namespace ConsoleApp1
                             Console.WriteLine(ret);
                             break;
                         }
+                        
+                        //Перевод из Морзы в EN
                     case 2:
                         {
                             Console.WriteLine("Введите текст: ");
